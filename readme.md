@@ -1,0 +1,1 @@
+Code for mvGCN: multi-view graph convolution network forpredicting links in biomedical bipartite networkswith multi-similarity fusion, which is going to be published online in bioinformatics.
