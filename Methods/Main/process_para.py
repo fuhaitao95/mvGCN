@@ -25,7 +25,7 @@ def optPara():
     parser.add_argument('--num_layer', type=int, default=2, choices=[1,2,3,4,5,6])
     
     
-    parser.add_argument('--similarity_att', type=int, default=9, choices=[-1,0,1,2,3,4,5,6,7,8,9],
+    parser.add_argument('--similarity_att', type=int, default=9, choices=[9],
                         help='-1 for average, 0 for Huang att, 1 for bi att 2 for cross end att, 3 for cosine, 4 for cat average, 5 for A3NCF, 6 for Global Local attention, 7 for # 直接给与linear转换')    
     parser.add_argument('--layer_no', type=int, default=-1, help='single layer (-1) or not (>-1), no greater than num_layer', choices=[-1,0,1,2,3,4,5])
     parser.add_argument('--ind_sim', type=int, default=-1,
@@ -66,7 +66,7 @@ def optPara():
     
     
     parser.add_argument('--hh_fusion', default='add', choices=['cat', 'add'])   ###
-    parser.add_argument('--layer_att', type=int, default=0, choices=[0,1])   ###
+    parser.add_argument('--layer_att', type=int, default=1)   ###
         
     parser.add_argument('--train_type', default='pretrain', choices=['pretrain','finetuning','one_stage'])   ###
     # if train_type is one_stage, then set the dgi_weight
